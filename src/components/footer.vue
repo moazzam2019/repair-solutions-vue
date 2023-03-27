@@ -2,7 +2,8 @@
   <div class="parent-element">
     <div class="footer-container">
       <div
-        style="display: flex; justify-content: space-evenly; max-width: 80%; margin-top: 30px;"
+        class="container-lg"
+        style="display: flex; justify-content: space-evenly; margin-top: 30px;"
       >
         <div class="col-md-3">
           <img
@@ -31,16 +32,18 @@
         <div class="col-md-3">
           <h2>Menu</h2>
           <ul>
-            <li style="text-decoration:none"><a href="/sign-in">Account</a></li>
-            <li><a href="/sign-in">Log in</a></li>
-            <li><a href="/sign-in">Register</a></li>
-            <li><a href="/shop">Shop</a></li>
-            <li><a href="/checkout">Checkout</a></li>
+            <li style="text-decoration:none">
+              <router-link to="/sign-in">Account</router-link>
+            </li>
+            <li><router-link to="/sign-in">Log in</router-link></li>
+            <li><router-link to="/sign-in">Register</router-link></li>
+            <li><router-link to="/shop">Shop</router-link></li>
+            <li><router-link to="/checkout">Checkout</router-link></li>
           </ul>
         </div>
         <div class="col-md-3">
           <h2>Subscribe to news</h2>
-          <form class="f-subscribe-form" action="#">
+          <form class="f-subscribe-form">
             <span>
               <input
                 placeholder="Your e-mail"
@@ -66,7 +69,7 @@
     </div>
 
     <div class="container-fluid bg-dark text-light copyright">
-      <div class="container py-3">
+      <div class="container-lg pt-3">
         <div class="row">
           <div class="col-lg-6">
             <p>
@@ -114,6 +117,7 @@ export default {
   margin-bottom: -600px;
   display: flex;
   justify-content: space-evenly;
+  text-align: center;
 }
 
 .copyright {

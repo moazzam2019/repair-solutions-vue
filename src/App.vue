@@ -1,7 +1,13 @@
 <template>
-  <div id="app">
-    <div style="display: flex; justify-content: center;">
-      <router-view style="width: 70%;" />
+  <div>
+    <!-- Header Starts from Here  -->
+
+    <header-component></header-component>
+
+    <!-- Mid Content Starts From Here -->
+
+    <div class="container-lg" style="display: flex; justify-content: center;">
+      <router-view />
     </div>
 
     <!-- Footer Starts from here -->
@@ -12,19 +18,15 @@
 
 <script>
 import footerComponent from "./components/footer.vue";
+import headerComponent from "./components/header.vue";
 export default {
-  components: { footerComponent },
+  components: { footerComponent, headerComponent },
   name: "App"
 };
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+a {
+  text-decoration: none;
 }
 </style>
